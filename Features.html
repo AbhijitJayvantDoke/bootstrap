@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Navbar with Modals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-secondary  sticky-top">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <span class="badge text-bg-primary fs-5 hover-shadow">ST</span>
+            </a>
+
+            <!-- Toggler for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links and buttons -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><span
+                                class="badge text-bg-secondary hover-shadow">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Features.html"><span
+                                class="badge text-bg-secondary hover-shadow">Features</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Pricing.html"><span class="badge text-bg-warning hover-shadow">Pricing</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html"><span class="badge text-bg-info hover-shadow">Contact</span></a>
+                    </li>
+                </ul>
+
+                <!-- Login / Signup Buttons styled as badges -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <span class="badge text-bg-primary  hover-shadow">Login</span>
+                    </button>
+                    <button class="btn btn-sm btn-outline-success " data-bs-toggle="modal"
+                        data-bs-target="#signupModal">
+                        <span class="badge text-bg-success hover-shadow">Signup</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--main-->
+    <div class="container feature-section">
+
+        <!-- 1. Samsung Galaxy S24 Ultra -->
+        <div class="row align-items-center mb-5 feature-card">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="https://images.samsung.com/levant/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-color-titanium-yellow-back-mo.jpg?imbypass=true"
+                    alt="Samsung Galaxy S24 Ultra" class="img-fluid feature-img" />
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold text-primary">Samsung Galaxy S24 Ultra</h3>
+                <p class="text-muted fs-5">Flagship Android smartphone with pro-grade camera and AI features.</p>
+                <ul class="list-group list-group-flush fs-6">
+                    <li class="list-group-item"><strong>📷 200MP Quad Camera:</strong> Capture ultra-high resolution
+                        photos and 8K videos.</li>
+                    <li class="list-group-item"><strong>⚡ 5000mAh Battery:</strong> With 45W fast charging and wireless
+                        PowerShare.</li>
+                    <li class="list-group-item"><strong>🧠 Snapdragon 8 Gen 2:</strong> Optimized for Galaxy with 12GB
+                        RAM and 1TB storage.</li>
+                    <li class="list-group-item"><strong>📱 6.8" AMOLED 120Hz:</strong> Dynamic display with Gorilla
+                        Glass Victus 2.</li>
+                    <li class="list-group-item"><strong>🛡️ IP68 Rating:</strong> Water and dust resistant for peace of
+                        mind.</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-feature">Learn More</a>
+            </div>
+        </div>
+
+        <!-- 2. iPhone 15 Pro Max -->
+        <div class="row align-items-center mb-5 flex-md-row-reverse feature-card">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-2-202309?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1692844824820"
+                    alt="iPhone 15 Pro Max" class="img-fluid feature-img" />
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold text-danger">iPhone 15 Pro Max</h3>
+                <p class="text-muted fs-5">The ultimate iPhone experience powered by the A17 Pro chip.</p>
+                <ul class="list-group list-group-flush fs-6">
+                    <li class="list-group-item"><strong>📷 5x Telephoto Camera:</strong> Precision zoom with advanced
+                        image stabilization.</li>
+                    <li class="list-group-item"><strong>🔋 All-Day Battery:</strong> Efficient power with MagSafe fast
+                        charging.</li>
+                    <li class="list-group-item"><strong>⚙️ A17 Pro Chip:</strong> First 3nm chip with console-level
+                        gaming support.</li>
+                    <li class="list-group-item"><strong>🪶 Titanium Frame:</strong> Lighter, stronger, and more premium
+                        than ever.</li>
+                    <li class="list-group-item"><strong>🛡️ Ceramic Shield:</strong> Industry-leading durability and
+                        IP68 rating.</li>
+                </ul>
+                <a href="#" class="btn btn-danger btn-feature">Learn More</a>
+            </div>
+        </div>
+
+        <!-- 3. Google Pixel 8 Pro -->
+        <div class="row align-items-center mb-5 feature-card">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="https://fdn2.gsmarena.com/vv/pics/google/google-pixel-8-pro-1.jpg" alt="Google Pixel 8 Pro"
+                    class="img-fluid feature-img" />
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold text-success">Google Pixel 8 Pro</h3>
+                <p class="text-muted fs-5">Smarter than ever — powered by Google AI and the Tensor G3 chip.</p>
+                <ul class="list-group list-group-flush fs-6">
+                    <li class="list-group-item"><strong>🧠 Google AI:</strong> Smart replies, call screening, and live
+                        translation.</li>
+                    <li class="list-group-item"><strong>📷 Pro Camera Tools:</strong> Real Tone, Magic Editor & Night
+                        Sight Video.</li>
+                    <li class="list-group-item"><strong>🔋 Adaptive Battery:</strong> Lasts up to 72 hours on Extreme
+                        Battery Saver.</li>
+                    <li class="list-group-item"><strong>📱 6.7" Super Actua Display:</strong> Brilliant brightness and
+                        clarity.</li>
+                    <li class="list-group-item"><strong>🛡️ Titan M2 Security:</strong> Built-in chip to protect your
+                        data and privacy.</li>
+                </ul>
+                <a href="#" class="btn btn-success btn-feature">Learn More</a>
+            </div>
+        </div>
+
+        <!-- 4. OnePlus 12 -->
+        <div class="row align-items-center mb-5 flex-md-row-reverse feature-card">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+                    alt="OnePlus 12" class="img-fluid feature-img" />
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold text-danger">OnePlus 12</h3>
+                <p class="text-muted fs-5">Performance meets elegance with Hasselblad-powered cameras.</p>
+                <ul class="list-group list-group-flush fs-6">
+                    <li class="list-group-item"><strong>📷 Hasselblad Triple Camera:</strong> Natural color calibration
+                        & 3x zoom.</li>
+                    <li class="list-group-item"><strong>⚡ 5400mAh Battery:</strong> 100W SuperVOOC + 50W Wireless
+                        Charging.</li>
+                    <li class="list-group-item"><strong>🧠 Snapdragon 8 Gen 3:</strong> With up to 16GB RAM and UFS 4.0
+                        storage.</li>
+                    <li class="list-group-item"><strong>🎮 120Hz ProXDR Display:</strong> Dolby Vision and ultra-high
+                        touch response.</li>
+                    <li class="list-group-item"><strong>🌧️ IP65 Rated:</strong> Splash resistance for everyday
+                        durability.</li>
+                </ul>
+                <a href="#" class="btn btn-danger btn-feature">Learn More</a>
+            </div>
+        </div>
+
+        <!-- 5. ASUS ROG Phone 8 Pro -->
+        <div class="row align-items-center mb-5 feature-card">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="https://dlcdnwebimgs.asus.com/gain/A74F4D6B-F170-45DA-8CD6-1C4941D71596"
+                    alt="ASUS ROG Phone 8 Pro" class="img-fluid feature-img" />
+            </div>
+            <div class="col-md-6">
+                <h3 class="fw-bold text-dark">ASUS ROG Phone 8 Pro</h3>
+                <p class="text-muted fs-5">The ultimate gaming phone with futuristic design and beast specs.</p>
+                <ul class="list-group list-group-flush fs-6">
+                    <li class="list-group-item"><strong>🎮 Snapdragon 8 Gen 3:</strong> With advanced cooling for peak
+                        gaming.</li>
+                    <li class="list-group-item"><strong>📷 50MP Sony Sensor:</strong> Flagship optics with gimbal
+                        stabilization.</li>
+                    <li class="list-group-item"><strong>🖥️ 165Hz AMOLED Display:</strong> Ultra-smooth for pro-level
+                        gaming.</li>
+                    <li class="list-group-item"><strong>⚡ 5500mAh Dual Battery:</strong> 65W HyperCharge & 15W wireless.
+                    </li>
+                    <li class="list-group-item"><strong>💡 AniMe Vision:</strong> Customizable LED matrix for
+                        personalization.</li>
+                </ul>
+                <a href="#" class="btn btn-dark btn-feature">Learn More</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--video info-->
+    <div class="video-wrapper">
+        <iframe
+            src="https://www.youtube.com/embed/fmSmcSfC5fk?autoplay=1&loop=1&controls=0&mute=1&rel=0&playlist=fmSmcSfC5fk"
+            title="YouTube video" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+
+    </div>
+
+    <!--footer-->
+    <footer class="footer bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <hr class="border-secondary mb-3" style="opacity: 0.2;">
+            <p class="mb-1">
+                &copy; <span id="year"></span> <strong class="text-info">@abhijitdoke2025</strong>
+            </p>
+            <small class="text-secondary">All rights reserved.</small>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-update year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

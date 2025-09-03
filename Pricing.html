@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-secondary  sticky-top">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <span class="badge text-bg-primary fs-5 hover-shadow">ST</span>
+            </a>
+
+            <!-- Toggler for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links and buttons -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><span
+                                class="badge text-bg-secondary hover-shadow">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Features.html"><span
+                                class="badge text-bg-success hover-shadow">Features</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Pricing.html"><span
+                                class="badge text-bg-warning hover-shadow">Pricing</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html"><span class="badge text-bg-info hover-shadow">Contact</span></a>
+                    </li>
+                </ul>
+
+                <!-- Login / Signup Buttons styled as badges -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <span class="badge text-bg-primary  hover-shadow">Login</span>
+                    </button>
+                    <button class="btn btn-sm btn-outline-success " data-bs-toggle="modal"
+                        data-bs-target="#signupModal">
+                        <span class="badge text-bg-success hover-shadow">Signup</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+
+    <div class="container my-5">
+        <h2 class="mb-4 text-center text-primary fw-bold">Pricing Plans</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Laptop Pricing Card -->
+            <div class="col">
+                <div class="card shadow-sm rounded-4 border-0 h-100 hover-shadow">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                        class="card-img-top rounded-top" style="height: 220px; object-fit: contain;" alt="MacBook Pro">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary fw-semibold">MacBook Pro</h5>
+                        <p class="card-text text-muted flex-grow-1">High-end laptop with Retina display and Apple
+                            M-series chip.</p>
+                        <h4 class="text-success fw-bold">$1,999</h4>
+                        <a href="#" class="btn btn-outline-primary mt-3">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Pricing Card -->
+            <div class="col">
+                <div class="card shadow-sm rounded-4 border-0 h-100 hover-shadow">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+                        class="card-img-top rounded-top" style="height: 220px; object-fit: contain;" alt="Smartphone">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary fw-semibold">iPhone 14 Pro</h5>
+                        <p class="card-text text-muted flex-grow-1">Latest Apple smartphone with A16 chip and ProMotion
+                            display.</p>
+                        <h4 class="text-success fw-bold">$1,099</h4>
+                        <a href="#" class="btn btn-outline-success mt-3">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Another Laptop Pricing Card -->
+            <div class="col">
+                <div class="card shadow-sm rounded-4 border-0 h-100 hover-shadow">
+                    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9"
+                        class="card-img-top rounded-top" style="height: 220px; object-fit: contain;" alt="Dell XPS">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary fw-semibold">Dell XPS 13</h5>
+                        <p class="card-text text-muted flex-grow-1">Ultra-thin Windows laptop with infinity-edge
+                            touchscreen.</p>
+                        <h4 class="text-success fw-bold">$1,299</h4>
+                        <a href="#" class="btn btn-outline-primary mt-3">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Another Mobile Pricing Card -->
+            <div class="col">
+                <div class="card shadow-sm rounded-4 border-0 h-100 hover-shadow">
+                    <img src="https://i.ebayimg.com/images/g/wpAAAeSwKCRoL051/s-l1200.jpg"
+                        class="card-img-top rounded-top" style="height: 220px; object-fit: contain;"
+                        alt="Samsung Galaxy S23">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary fw-semibold">Samsung Galaxy S23</h5>
+                        <p class="card-text text-muted flex-grow-1">Flagship Android phone with dynamic AMOLED display.
+                        </p>
+                        <h4 class="text-success fw-bold">$999</h4>
+                        <a href="#" class="btn btn-outline-success mt-3">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--video info-->
+    <div class="video-wrapper">
+        <iframe
+            src="https://www.youtube.com/embed/fmSmcSfC5fk?autoplay=1&loop=1&controls=0&mute=1&rel=0&playlist=fmSmcSfC5fk"
+            title="YouTube video" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <!--footer-->
+    <footer class="footer bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <hr class="border-secondary mb-3" style="opacity: 0.2;">
+            <p class="mb-1">
+                &copy; <span id="year"></span> <strong class="text-info">@abhijitdoke2025</strong>
+            </p>
+            <small class="text-secondary">All rights reserved.</small>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-update year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
